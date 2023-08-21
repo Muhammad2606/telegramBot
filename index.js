@@ -44,7 +44,7 @@ const bootstrap = () => {
     bot.on('message', async msg => {
         const text = msg.text;
         const chatId = msg.chat.id;
-
+        console.log(msg);
      if (text === "/start") {
                 await bot.sendSticker(chatId, 'https://tlgrm.eu/_/stickers/4dd/300/4dd300fd-0a89-3f3d-ac53-8ec93976495e/3.jpg');
 
@@ -61,9 +61,10 @@ const bootstrap = () => {
         siz botmsiz -- ${msg.from.is_bot}
         premium bormi -- ${msg.from.is_premium}
         sizning idingiz -- ${msg.from.id}
-       tabriklaymiz siz odam ekansiz
+       tabriklaymiz siz odam ekansiz 😀
         `);
             }
+       
 
             if (text === '/book') {
                 return await bot.sendDocument(chatId, 'https://t.me/kitobkitobkitob/34');
